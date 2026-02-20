@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>Chuch Tour - Barcelona</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <div class="loader-content">
+    <div class="loader-icon"><i class="fas fa-map-marked-alt"></i></div>
+    <h1>Chuch Tour</h1>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- CONFETTI CANVAS -->
+<canvas id="confetti"></canvas>
+
+<!-- COMPLETION MESSAGE -->
+<div id="completionMsg">
+  <div class="completion-box">
+    <div class="completion-icon">🤪</div>
+    <h2>¡Eres la mejor!<i class="fa-solid fa-heart"></i></h2>
+    <p>Has completado el 100% del Chuch Tour</p>
+    <button onclick="closeCompletion()">¡Genial!</button>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="app">
+  <!-- HERO HEADER -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Chuch Tour</h1>
+    </div>
+  </header>
+
+  <!-- PROGRESS -->
+  <div class="progress-section" id="progressSection">
+    <div class="progress-text">
+      <i class="fas fa-route"></i>
+      <span id="progressLabel">Has visto el 0% del Chuch Tour</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+
+  <!-- GRID -->
+  <section class="sites-grid" id="sitesGrid"></section>
+
+  <!-- RATING -->
+  <section class="rating-section">
+    <h3>Califica el ChuchTour</h3>
+    <div class="stars" id="stars">
+      <i class="fas fa-star" data-v="1"></i>
+      <i class="fas fa-star" data-v="2"></i>
+      <i class="fas fa-star" data-v="3"></i>
+      <i class="fas fa-star" data-v="4"></i>
+      <i class="fas fa-star" data-v="5"></i>
+    </div>
+    <p class="rating-msg" id="ratingMsg"></p>
+  </section>
+
+  <footer><p>ChuchTour © 2025 · Barcelona con ❤️</p></footer>
+</div>
+
+<!-- DETAIL MODAL -->
+<div id="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-arrow-left"></i></button>
+    <div class="carousel" id="carousel">
+      <div class="carousel-track" id="carouselTrack"></div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
